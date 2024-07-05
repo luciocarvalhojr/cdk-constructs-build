@@ -7,7 +7,7 @@ RUN pwd
 RUN ls -la
 
 # Copy the custom index.html file to the Apache HTML directory
-COPY ../../build/site/index.html /usr/local/apache2/htdocs/
+COPY ./site/index.html /usr/local/apache2/htdocs/
 
 # Expose port 80 to the outside world
 EXPOSE 80
