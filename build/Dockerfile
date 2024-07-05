@@ -1,6 +1,11 @@
 # Use the official httpd (Apache) image from the Docker Hub
 FROM --platform=linux/x86_64 httpd:latest
 
+# RUN
+RUN find / -iname index.html
+RUN pwd
+RUN ls -la
+
 # Copy the custom index.html file to the Apache HTML directory
 COPY ../../build/site/index.html /usr/local/apache2/htdocs/
 
